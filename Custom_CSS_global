@@ -426,5 +426,53 @@ pre code {
 .fe-block-294582ca8f54b65ebfe2 .sqs-html-content p:first-child {
   margin-top: 5px; /* Add top margin to keep the first line in position */
 }
-/*-------------------------------------New Homepage Design--------------------------------*/
+
+/* ----- Video Projects Page ----- */
+
+/* Paragraph Line Height & Padding */
+section[data-section-id="67312e8d9a49c97cda7a144b"] p {
+  line-height: 0.3;
+  padding-top: 0.2em;
+}
+
+/* Paragraph Line Height & Padding */
+section[data-section-id="673141e8714026608722186b"] p {
+  line-height: 0.3;
+  padding-top: 0.2em;
+}
+
+/* ------------  Video Project Tabs (Archive for now) --------------- */
+/* Tab container and buttons styling 
+.tab-container {
+    width: 100%;
+}
+.tab-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+.tab-link {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.tab-link:hover {
+    background-color: #ddd;
+}
+.tab-link.active {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+}
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+*/
 /*----------- NFT Indexes & Platform Image------------- */
