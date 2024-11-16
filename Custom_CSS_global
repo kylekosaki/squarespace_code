@@ -316,7 +316,7 @@ pre code {
   margin-top: 0;
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffffff;~
 }
 
 /* Adjust the title styling */
@@ -418,12 +418,24 @@ pre code {
 /*NFT PROFILE PAGE*/
 /* Adjust line spacing between all lines */
 .fe-block-294582ca8f54b65ebfe2 .sqs-html-content p {
-  line-height: normal; /* Adjust this value to control the space between lines */
+  line-height: 0.8; /* Adjust this value to control the space between lines */
     margin-bottom: 5px; /* Adjust space between paragraphs */
 }
 
 /* Add margin to compensate for the change in line-height */
 .fe-block-294582ca8f54b65ebfe2 .sqs-html-content p:first-child {
+  margin-top: 5px; /* Add top margin to keep the first line in position */
+}
+
+/*FORKAST LABS INDEX PAGE*/
+/* Adjust line spacing between all lines */
+.fe-block-0796ff626080ec0de5a5 .sqs-html-content p {
+  line-height: 0.8; /* Adjust this value to control the space between lines */
+    margin-bottom: 5px; /* Adjust space between paragraphs */
+}
+
+/* Add margin to compensate for the change in line-height */
+.fe-block-0796ff626080ec0de5a5 .sqs-html-content p:first-child {
   margin-top: 5px; /* Add top margin to keep the first line in position */
 }
 /*-------------------------------------New Homepage Design--------------------------------*/
