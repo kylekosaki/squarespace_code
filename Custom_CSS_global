@@ -328,7 +328,7 @@ pre code {
 }
 
 .blog-item-title .entry-title {
-    font-family: 'Space Grotesk', sans-serif !important;
+    font-family: 'Instrument Sans', sans-serif !important;
     font-size: 48px !important;
     font-weight: 600 !important;
     line-height: 1.1 !important;
@@ -352,7 +352,7 @@ pre code {
 
 /* Target the category eyebrow */
 .blog-meta-item--categories .blog-item-category {
-    font-family: 'Inter', sans-serif !important; /* Change font */
+    font-family: 'Instrument Sans', sans-serif !important; /* Change font */
     font-size: 14px; /* Adjust font size */
     font-weight: 400; /* Adjust font weight */
     color: #999999; /* Change text color */
@@ -506,8 +506,8 @@ section[data-section-id="673141e8714026608722186b"] p {
 
 /* Ensure the title is styled correctly */
 .portfolio-hover-item-title {
-  font-family: var(--header-2-font-family); /* Use Header 2 font */
-  font-size: var(--header-2-font-size);
+  font-family: 'Instrument Sans', sans-serif !important; /* Use specific font-family */
+  font-size: 24px !important; /* Set a specific font size */
   margin: 0; /* Remove any extra margin */
   color: #ffffff; /* Ensure it’s visible on a dark background */
 }
@@ -516,6 +516,15 @@ section[data-section-id="673141e8714026608722186b"] p {
 .portfolio-hover-item:hover {
   background-color: #222; /* Slightly darken on hover */
   cursor: pointer;
+}
+/* Hide navigation bar for a specific page */
+body.collection-67393bb0f5d64d49acb385a5 .header-display-desktop,
+body.collection-67393bb0f5d64d49acb385a5 .header-display-mobile {
+    display: none !important;
+}
+/* Hide footer for a specific page */
+body.collection-67393bb0f5d64d49acb385a5 #footer-sections {
+  display: none !important;
 }
 
 /* ------------  Video Project Tabs (Archive for now) --------------- */
