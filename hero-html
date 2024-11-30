@@ -1,0 +1,103 @@
+<div class="sqs-block-content"></div>
+<div class="sqs-html-content">
+  <p id="fade-text" class="sqsrte-small">
+    I’m Kyle, a Product Designer crafting impactful experiences, powered by imagination.
+  </p>
+</div>
+
+<style>
+/* Tablet font size */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sqsrte-small {
+    font-size: 50px !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    line-height: 1.1em !important;
+  }
+}
+
+/* Mobile font size */
+@media (max-width: 768px) {
+  .sqsrte-small {
+    font-size: 40px !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    line-height: 1.05em !important;
+  }
+}
+
+/* Ensure dynamic spans use the same font size */
+.sqsrte-small .word {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Initially hide the text with CSS to prevent flashing */
+#fade-text {
+  margin: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  max-width: 100%;
+  opacity: 1; /* Ensure the container is visible */
+}
+
+#fade-text .word {
+  display: inline-block;
+  opacity: 0; /* Start hidden */
+  filter: blur(10px); /* Start with a heavy blur */
+  animation: fadeInWord 0.9s forwards cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother fade-in */
+}
+
+@keyframes fadeInWord {
+  0% {
+    opacity: 0;
+    filter: blur(10px); /* Blur at the start */
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0); /* Fully clear at the end */
+  }
+}
+
+/* Remove extra padding and margins */
+.sqs-block-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.sqs-html-content {
+  width: 100% !important;
+  overflow-wrap: break-word;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const textElement = document.getElementById('fade-text');
+  const text = textElement.textContent.trim();
+  textElement.innerHTML = '';
+
+  const words = text.split(' ');
+
+  const totalDuration = 3.6; // Total animation time in seconds
+  const overlap = 0.25; // Slightly increase overlap for smooth flow
+  const perWordDelay = totalDuration / words.length - overlap;
+
+  words.forEach((word, index) => {
+    const wordSpan = document.createElement('span');
+    wordSpan.classList.add('word');
+    wordSpan.innerText = word;
+
+    // Calculate delay for each word
+    wordSpan.style.animationDelay = `${index * perWordDelay}s`;
+
+    textElement.appendChild(wordSpan);
+    const space = document.createTextNode(' ');
+    textElement.appendChild(space);
+  });
+});
+</script>
