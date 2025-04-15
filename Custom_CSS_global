@@ -46,7 +46,7 @@ h2 {
 h3 {
     font-family: 'Instrument Sans', sans-serif; /* Add your preferred font-family */
     font-size: 36px; /* Default desktop size */
-    font-weight: 600; /* Example weight */
+    font-weight: 500; /* Example weight */
     line-height: 1.1; /* Adjust for spacing */
     letter-spacing: 0; /* Adjust if needed */
     margin-bottom: 20px; /* Spacing below the element */
@@ -56,7 +56,7 @@ h3 {
 @media (max-width: 480px) {
     h3 {
         font-size: 26px; /* Smaller size for mobile */
-        font-weight: 600; /* Keep weight consistent with tablet */
+        font-weight: 500; /* Keep weight consistent with tablet */
         line-height: 1.2; /* Increase spacing for better readability */
       letter-spacing: 0; /* Adjust if needed */
         margin-bottom: 10px; /* Further reduce margin */
