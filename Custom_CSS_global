@@ -126,40 +126,15 @@ pre code {
   font-family: 'Instrument Sans' !important;
 }
 
-/* Mobile navigation styles for smartphone (max-width 768px) */
-@media (max-width: 768px) {
-  /* Center the navigation container */
-  .header-menu-nav-wrapper {
-    text-align: center; /* Center the text */
-  }
-
-  /* Target individual navigation items */
-  .header-menu-nav-item a,
-  .header-menu-nav-item-content a,
-  .header-menu-nav-item--collection a {
-    font-family: 'Instrument Sans', sans-serif; /* Use Space Grotesk font */
-    font-size: 32px; /* Larger font size */
-    font-weight: 500; /* Set font weight */
-    color: #000; /* Text color */
-    text-decoration: none; /* Remove underline */
-    padding: 12px 0; /* Reduced padding for space between items */
-    display: block; /* Ensure block behavior */
-  }
-
-  /* Style the chevron (arrow) */
-  .header-menu-nav-item-content .chevron--right {
-    display: inline-block; /* Keep the arrow inline with text */
-    font-size: 18px; /* Adjust the arrow size */
-    font-weight: bold; /* Bold arrow */
-    color: #000; /* Arrow color */
-    margin-left: 10px; /* Add space between text and arrow */
-  }
+/* Target the social icons container */
+.header-actions-action--social {
+  display: flex !important;
+  gap: 0px !important; /* Adjust this value as needed */
+  width: auto !important; /* Remove any fixed width */
 }
 
-/* -----Style for dropdown menu items -----*/
-.header-nav-folder-item {
-  margin: 0;
-}
+//------------------------------Menu Item Styling----------------------------//
+
 
 /* Style the links inside the dropdown */
 .header-nav-folder-item a {
@@ -187,11 +162,34 @@ pre code {
   gap: 20px; /* Adjust this value to increase or decrease spacing */
 }
 
-/* Target the social icons container */
-.header-actions-action--social {
-  display: flex !important;
-  gap: 0px !important; /* Adjust this value as needed */
-  width: auto !important; /* Remove any fixed width */
+/* Position container relative so we can absolutely position inside it */
+.header-nav-folder-item a {
+  position: relative;
+  display: block;
+  padding-right: 24px; /* Add space so text doesn't overlap with icon */
+}
+
+/* Arrow icon at the far right with a dramatic entrance */
+.header-nav-folder-item a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 8px; /* 8px padding on the right of the icon */
+  transform: translateY(-50%) translateX(-12px); /* Start further left */
+  width: 16px;
+  height: 16px;
+  background-image: url('https://static1.squarespace.com/static/6466f458f4d332290d86570f/t/66ea4a6869bc0e05e2c67ae2/1726630504736/arrow-right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Trigger the effect on hover */
+.header-nav-folder-item a:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 
